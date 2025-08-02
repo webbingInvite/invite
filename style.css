@@ -1,0 +1,126 @@
+body {
+  font-family: "Shantell Sans";
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  color: #d4af37be;
+  text-align: center;
+  margin-top: 40px; 
+}
+
+header h1 {
+  font-family: "Great Vibes", cursive;
+  margin: 0;
+  font-size: 4em;
+  line-height: 1.2;
+}
+
+.event-date {
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #4b4b48;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weekday, .month {
+  font-size: 28px;
+}
+
+.day {
+  font-size: 44px;
+  font-weight: bold;
+  color: #d4af37be;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.event-details {
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 3px solid #d4af37be;
+  border-radius: 10px;
+  background-color: #f6ead8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-bottom: 30px;
+}
+
+.event-details p:nth-of-type(3) {
+  margin-bottom: 60px;
+}
+
+.event-details p {
+  margin: 7px 0;
+}
+
+.content {
+  font-size: 24px;
+  padding: 20px;
+  color: #4b4b48;
+}
+
+.countdown-container {
+  color: #4b4b48;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+}
+
+#countdown {
+  font-size: 2rem;
+  color: #d4af37be;
+}
+
+footer {
+  font-size: 22px;
+  text-align: center;
+  color: #4b4b48;
+}
+
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .event-date {
+    font-size: 1.2rem;
+  }
+
+  .event-details {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    font-size: 18px;
+    color: #4b4b48;
+  }
+
+  .countdown-container {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}
+

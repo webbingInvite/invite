@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>Ivana i Marko</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Ivana Rozić<br>&<br>Marko Veizović</h1>
+  </header>
+
+  <section class="content">
+    <p>Pozivamo Vas da budete dio našeg najposebnijeg dana!</p>
+
+   <div class="event-date">
+    <span class="weekday">SUBOTA</span> 
+    <span class="day">27</span> 
+    <span class="month">RUJNA</span>
+   </div>
+
+    <div class="event-details">
+      <p><i class="fas fa-clock"></i> 17:00</p>
+      <p><i class="fas fa-place-of-worship"></i> Crkva sv. Ivana apostola i evanđelista, Mostar</p>
+      <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/ar4JDWThqPm4Ft5DA" target="_blank">Ovdje je vjenčanje!</a></p>
+      <p><i class="fas fa-clock"></i> 19:00</p>
+      <p><i class="fas fa-utensils"></i> Podrumi Andrija, Paoča</p>
+      <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/e4eeHMJnogvpCsUMA" target="_blank">Ovdje je slavlje! :)</a></p>
+    </div>
+
+    <p>Molimo Vas da potvrdite svoj dolazak najkasnije do 05.09. putem linka:<br> <a href="https://forms.gle/yQzZXTWnYsfF8DDr9">Dolazim?</a></p>
+
+    <div class="countdown-container">
+      <p>Sad će, samo što nije...</p>
+      <div id="countdown"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Veselimo se dijeliti s Vama svoje najljepše trenutke! <i class="fas fa-glass-cheers"></i> </p>
+  </footer>
+
+  <script>
+    const weddingDate = new Date("Sep 27, 2025 17:00:00").getTime();
+
+    const countdownFunction = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "Dočekali :)";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
