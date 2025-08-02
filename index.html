@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
   <title>Ivana i Marko</title>
 
+  <link rel="preload" href="background.jpg" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -40,34 +41,12 @@
       <p>Sad će, samo što nije...</p>
       <div id="countdown"></div>
     </div>
+
+    <script src="countdown.js" defer></script>
   </section>
 
   <footer>
     <p>Veselimo se dijeliti s Vama svoje najljepše trenutke! <i class="fas fa-glass-cheers"></i> </p>
   </footer>
-
-  <script>
-    const weddingDate = new Date("Sep 27, 2025 17:00:00").getTime();
-
-    const countdownFunction = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
-
-      if (distance < 0) {
-        clearInterval(countdownFunction);
-        document.getElementById("countdown").innerHTML = "Dočekali :)";
-      }
-    }, 1000);
-  </script>
 </body>
 </html>
-
-
