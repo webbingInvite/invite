@@ -2,15 +2,11 @@ body {
   font-family: "Shantell Sans";
   background-image: url('background.jpg');
   background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  background-position: top left;
+  background-attachment: scroll;
   margin: 0;
   padding: 0;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 header {
@@ -24,6 +20,7 @@ header h1 {
   margin: 0;
   font-size: 4em;
   line-height: 1.2;
+  text-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 0.322);
 }
 
 .event-date {
@@ -39,11 +36,12 @@ header h1 {
 }
 
 .day {
-  font-size: 44px;
+  font-size: 42px;
   font-weight: bold;
   color: #d4af37be;
   margin-left: 20px;
   margin-right: 20px;
+  text-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 0.322);
 }
 
 .event-details {
@@ -123,4 +121,3 @@ footer {
     font-size: 1rem;
   }
 }
-
